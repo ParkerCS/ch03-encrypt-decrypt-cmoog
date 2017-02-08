@@ -6,7 +6,19 @@ The functions are already contained in the files.  Your job is to use them to en
 
 #1 Decrypt this message using imports from the decode.py and encryption_key.py.  Make the result print in a friendly format that is easy for the user to understand. (10pt)
 encrypted_message = "¿®ªªÈÙ®ÏT¤ÕEÓ¹âeCíÉÁÏº¢¡i¸ºÇ¿"
+import decode
+import encryption_key
+
+print("Here is your decrypted message:",  decode.decode(encryption_key.key, encrypted_message))
+
 
 #2 Encrypt your name and print the encrypted result.  Make the result print in a friendly format that is easy for the user to understand. (5pt)
+name = "Charles Moog"
+import encode
+encoded_name = encode.encode(encryption_key.key, name)
+print(encoded_name)
+
 
 #3 Decrypt the encrypted code from part 2 to ensure that it worked properly and print the result.  Make the result print in a friendly format that is easy for the user to understand. (5pt)
+
+print(decode.decode(encryption_key.key, encoded_name))
